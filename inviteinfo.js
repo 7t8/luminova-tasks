@@ -19,7 +19,7 @@ module.exports = {
         // Now we'll use the fetchInvite function in client to fetch an InviteGuild object that we can read our needed data from.
         await client.fetchInvite(inviteCode).then(async (info) => {
             // Convert server ID to timestamp.
-            let serverTimestamp = new Date(Number((BigInt(info.guild.id) >> 22n)) + 1420070400000)
+            let serverTimestamp = new Date(Number((BigInt(info.guild.id) >> 22n)) + 1420070400000);
 
             const inviteEmbed = new MessageEmbed()
             .setTitle("Invite Info")
