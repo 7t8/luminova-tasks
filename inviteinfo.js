@@ -16,7 +16,7 @@ module.exports = {
         // First, I get the string that we required as an option for the slash command.
         let inviteCode = interaction.options.getString("code");
 
-        // Now we'll use the fetchInvite function in client to fetch an InviteGuild object that we can read our needed data from.
+        // Now we'll use the fetchInvite function in client to fetch an Invite object that we can read our needed data from.
         await client.fetchInvite(inviteCode).then(async (info) => {
             // Convert server ID to timestamp.
             let serverTimestamp = new Date(Number((BigInt(info.guild.id) >> 22n)) + 1420070400000);
